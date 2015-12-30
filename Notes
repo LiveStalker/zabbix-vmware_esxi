@@ -1,2 +1,4 @@
 PyWBEM: https://github.com/pywbem/pywbem
 PyWBEM 0.8.0 https://github.com/pywbem/pywbem/tree/master/dist/pywbem-0.8.0, supported no_verification=True
+apt-get install python-m2crypto
+python setup.py install
