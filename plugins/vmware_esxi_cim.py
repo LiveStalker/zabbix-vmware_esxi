@@ -69,14 +69,17 @@ def cim_read_property(class_name, element_name, property_names=[]):
 
 def main():
     parser = OptionParser(usage='Usage: %prog [options] <discovery|inspect [<property>]>')
-    parser.add_option('-H', '--host', dest='host', help='VMware ESXi host')
-    parser.add_option('-u', '--username', dest='username', help='VMware ESXi user')
-    parser.add_option('-p', '--password', dest='password', help='VMware ESXi password')
+    #parser.add_option('-H', '--host', dest='host', help='VMware ESXi host')
+    #parser.add_option('-u', '--username', dest='username', help='VMware ESXi user')
+    #parser.add_option('-p', '--password', dest='password', help='VMware ESXi password')
     parser.add_option('--cim-classname', dest='cim_class_name', help='CIM class name')
     parser.add_option('--cim-elementname', dest='cim_element_name', help='CIM element name')
     parser.add_option('--cim-namespace', dest='cim_namespace', default='root/cimv2', help='CIM namespace')
 
     (options, args) = parser.parse_args()
+    options.host = ''
+    options.username = ''
+    options.password = ''
 
     if not options.host:
         parser.error("VMWare ESXi host is required")
